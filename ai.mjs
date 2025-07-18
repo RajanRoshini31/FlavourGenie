@@ -1,6 +1,6 @@
 // import { GoogleGenerativeAI } from "@google/generative-ai";
 
-//  const genAI = new GoogleGenerativeAI("AIzaSyBzf7EQCtYk1bJyiEdDItr-KfEHXwn0uu8");
+//  const genAI = new GoogleGenerativeAI("YOUR-API-KEY");
 // const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 // const result = await model.generateContent({
@@ -37,7 +37,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-const genAI = new GoogleGenerativeAI("AIzaSyBzf7EQCtYk1bJyiEdDItr-KfEHXwn0uu8");
+const genAI = new GoogleGenerativeAI("YOUR-API-KEY");
 
 app.post('/generate', async (req, res) => {
     const { prompt } = req.body;
